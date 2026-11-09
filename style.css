@@ -1,0 +1,240 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.site-header {
+   
+    padding:1.2rem;
+    -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px); 
+    position:sticky;
+    top:0;
+
+
+
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("background.jpg") center/cover no-repeat;
+    
+}    
+
+
+.navigation{
+    display:flex;
+
+    justify-content:space-between;
+}
+.nav-links a{
+    margin-right:1rem;
+   
+    
+}
+.navigation a{
+    text-decoration:none;
+    color:#bbc5ca;
+    font-weight:bold;
+    
+    }
+
+.navigation a:hover{
+    color: #F4C06B;
+}    
+.container{
+    
+    max-width:1160px;
+    margin-inline:auto;
+    
+}    
+.hero{
+   min-height:100vh;
+}
+.hero-content{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    min-height: 90vh;
+    gap: 4rem;   
+} 
+
+.main-title{
+    font-size: 2rem;
+    text-align:center;
+    color:#1B2A38;
+}
+.main-title h1 .word {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              color 0.25s ease;
+  cursor: default;
+}
+
+.main-title h1 .word:hover {
+      transform: translateY(-4px) scale(1.15);
+   }
+.hero-action{
+  display: flex;
+  gap: 32px;
+}
+.main-content{
+    padding:1rem;
+}
+.hilights{
+    font-size:larger;
+    color:rgba(255, 248, 240, 0.85);
+    
+    
+
+}
+.button-link{
+  display: inline-block;
+  padding:14px 24px;;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+.button-link:hover{
+    transform: translateY(-2px);
+}
+.button-link:focus-visible{
+  outline: 3px solid #FFF8F0;
+  outline-offset: 3px;
+}
+.primary{
+  background: #F4C06B;
+  color: #1B2A38;
+  border-color: #F4C06B;
+}
+.secondary{
+  background: transparent;
+  color: #F4C06B;
+  border-color: #F4C06B;
+}
+.primary:hover{
+  background: #FFF8F0;
+  border-color: #FFF8F0;
+}
+.secondary:hover{
+   background: transparent;
+  color: #FFF8F0;
+  border-color: #FFF8F0;
+}
+.menu-button{
+    display:none;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #F4C06B;
+    border: 2px solid #F4C06B;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+@media screen and (max-width: 750px) {
+    .nav-links{
+        display:flex;
+        flex-direction:column ;
+    }
+    .menu-button{
+    display:inline-flex;
+    
+    }
+    .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #0B5D7A;
+    border-top: 1px solid rgba(255, 248, 240, 0.2);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+  .navigation {
+  position: relative;
+}
+
+}
+
+.menu-button :hover,
+.menu-button[aria-expanded="true"] {
+  background: #F4C06B;
+  color: #1B2A38;
+}
+.menu-button:focus-visible {
+  outline: 3px solid #FFF8F0;
+  outline-offset: 3px;
+}
+
+.card-grid {
+  margin:1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background:transparent;
+  border: 1px solid ;
+  border-color:aliceblue;
+  border-radius: 16px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color:aliceblue;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.title {
+  margin: 0 0 8px;
+  color:aliceblue;
+  font-size: 20px;
+}
+
+.content {
+  margin: 0 0 16px;
+  color:aliceblue;
+  line-height: 1.5;
+}
+.back-to-top{
+  position:fixed;
+  bottom:10px;
+  right:20px;
+  text-decoration:none;
+  background-color:#0B5D7A;
+  padding: 10px 20px;
+  color:aliceblue;
+  border-radius:10px;
+}
+.site-footer{
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 14px;
+  color:#FFF8F0;
+  
+}

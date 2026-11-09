@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wandery</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navigation container" >
+            <a class="brand" href="#Home"><h2>Wandery</h2></a>
+            <button class="menu-button" type="button">Menu</button>
+            <div class="nav-links" id="nav-links">
+                <a href="#Home">Home</a>
+                <a href="#Howitworks">How it works</a>
+                <a href="#Populardestinations">Popular Destinations</a>
+                <a href="#Contact">Contact</a>
+
+                
+            </div>
+        </nav>
+    </header>
+  <main>
+    <section class="hero container" id="Home" >
+     <div class="hero-content">
+          <div class="main-title">
+            <h1><span class="word">Tell </span>
+              <span class="word">Us</span>
+              <span class="word">Where</span>
+              <span class="word"> You’re</span>
+              <span class="word"> Going.</span>
+              <span class="word"> We’ll</span>
+              <span class="word"> Show</span>
+              <span class="word"> You</span>
+              <span class="word"> What</span>
+              <span class="word"> to</span>
+              <span class="word"> Do.</span>
+            </h1> 
+          </div>
+            <div class="main-content">
+               <p class="hilights">Type any destination and get instant ideas for places to visit, things to do, and experiences you won’t want to miss.</p>
+               <p class="hilights"> Enter any city or country and get instant suggestions for places to visit, food to try, and things to do.
+              From hidden gems to must-see landmarks, discover the best of any destination in seconds.</p>
+            </div>  
+               <div class="hero-action">
+                 <a class="button-link primary" href="">Get My Ideas</a> 
+                <a class="button-link secondary" href="">Start Exploring</a> 
+               </div>   
+            
+      </div>
+       <div class="card-grid">
+         <article class="card">
+          <div class="card-body">
+            <h3 class="title">Paris,France </h3>
+            <p class="content">Arts,Cafe and city of lights</p>
+          </div>
+         </article>
+         <article class="card"> 
+           <div class="card-body">
+             <h3 class="title">Bali,Indonesia</h3>
+              <p class="content">Beaches, rice terraces, and spiritual calm.</p>
+           <div>
+         </article>
+         <article class="card"> 
+           <div class="card-body">
+             <h3 class="title">Tokyo, Japan</h3>
+             <p class="content">Where tradition meets the future</p>
+            </div>
+          </article>
+
+
+        </div> 
+   </section></main>  
+
+   <script>
+  const menuButton = document.querySelector(".menu-button");
+  const navLinks = document.getElementById("nav-links");
+
+  function setMenu(open) {
+    navLinks.classList.toggle("open", open);
+    menuButton.setAttribute("aria-expanded", open);
+    menuButton.textContent = open ? "Close" : "Menu";
+  }
+
+  // Open or close when the button is clicked
+  menuButton.addEventListener("click", () => {
+    setMenu(!navLinks.classList.contains("open"));
+  });
+
+  // Close the menu after tapping a link
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
+  });
+
+  // Close with the Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setMenu(false);
+  });
+
+  // Reset if the window becomes wide again
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 750) setMenu(false);
+  });
+</script>
+<footer class="site-footer"><p>&copy; 2026 Wandery. All rights reserved.</p></footer>
+<a class="back-to-top" href="#Top">Up</a>
+</body>
+</html>
